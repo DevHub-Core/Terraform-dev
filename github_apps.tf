@@ -15,7 +15,7 @@ locals {
 
 resource "github_app_installation_repository" "Renovate" {
   for_each        = toset([
-    "Customer-Order-Dev",
+    "Terraform-dev",
   ])
   installation_id = local.github_apps["Renovate"].installation_id
   repository      = each.value
