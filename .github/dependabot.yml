@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "saturday"
-      time: "00:05"
+      time: "00:10"
       timezone: "Europe/Berlin"
     groups:
       terraform-all:
