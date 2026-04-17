@@ -1,0 +1,23 @@
+name: Test Dependabot Grouping
+
+on:
+  workflow_dispatch: # run manually from GitHub Actions tab
+
+jobs:
+  check-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3        # old version, current is v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2  # old version, current is v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3      # old version, current is v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4    # old version, current is v5
+
+      - name: Done
+        run: echo "All steps completed - check if Dependabot groups these into one PR"
