@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: "terraform"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "00:05"
+      timezone: "Europe/Berlin"
+    groups:
+      terraform-all:
+        patterns:
+          - "*"
+    labels:
+      - "dependabot"
+      - "terraform"
+    commit-message:
+      prefix: "chore"
